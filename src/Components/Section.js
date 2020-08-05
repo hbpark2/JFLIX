@@ -14,10 +14,16 @@ const Title = styled.span`
 `;
 
 const Grid = styled.div`
+	margin: 0 auto;
 	margin-top: 25px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 125px);
 	grid-gap: 25px;
+	justify-content: center;
+
+	@media screen and (max-width: 1024px) {
+		grid-template-columns: repeat(1, 80%);
+	}
 `;
 
 const Section = ({ title, children }) => (

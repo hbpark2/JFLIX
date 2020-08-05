@@ -31,6 +31,9 @@ const Content = styled.div`
 	height: 100%;
 	position: relative;
 	z-index: 1;
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+	}
 `;
 
 const Cover = styled.div`
@@ -40,11 +43,20 @@ const Cover = styled.div`
 	background-position: center center;
 	background-size: cover;
 	border-radius: 5px;
+	transition: all 0.5s;
+
+	@media screen and (max-width: 1024px) {
+		width: 100%;
+		margin-bottom: 20px;
+	}
 `;
 
 const Data = styled.div`
 	width: 70%;
 	margin-left: 10px;
+	@media screen and (max-width: 1024px) {
+		width: 100%;
+	}
 `;
 
 const Title = styled.h3`
@@ -63,10 +75,13 @@ const Divider = styled.span`
 `;
 
 const Overview = styled.p`
-	font-size: 12px;
+	font-size: 16px;
 	opacity: 0.7;
 	line-height: 1.5em;
 	width: 50%;
+	@media screen and (max-width: 1024px) {
+		font-size: 12px;
+	}
 `;
 
 const DetailPresenter = ({ result, loading, error }) =>
