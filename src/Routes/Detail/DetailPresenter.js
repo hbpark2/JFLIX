@@ -108,12 +108,12 @@ const DetailPresenter = ({ result, loading, error }) =>
 								? result.release_date.substring(0, 4)
 								: result.first_air_date.substring(0, 4)}
 						</Item>
-						<Divider>▪️</Divider>
+						<Divider>.</Divider>
 						<Item>
 							{result.runtime ? result.runtime : result.episode_runtime}
 							&nbsp;minutes
 						</Item>
-						<Divider>▪️</Divider>
+						<Divider>.</Divider>
 						<Item>
 							{result.genres &&
 								result.genres.map((genre, index) =>
