@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
+	width: 100%;
 	font-size: 12px;
 `;
 
@@ -13,18 +14,22 @@ const Image = styled.div`
 	background-size: cover;
 	background-position: center center;
 	border-radius: 5px;
-	transition: opacity 0.3s ease-in-out;
+	transition: 0.3s;
 `;
 const Rating = styled.span`
 	position: absolute;
 	bottom: 5px;
 	right: 5px;
 	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
+	transition: 0.3s;
 `;
 const ImageContainer = styled.div`
+	border-radius: 50%;
+	overflow: hidden;
 	margin-bottom: 5px;
 	position: relative;
+	transition: all 0.5s;
+	transform: scale(0.8);
 	&:hover {
 		${Image} {
 			opacity: 0.3;
@@ -32,6 +37,12 @@ const ImageContainer = styled.div`
 		${Rating} {
 			opacity: 0.8;
 		}
+		border-radius: 0;
+		transform: scale(1);
+	}
+
+	@media screen and (max-width: 1024px) {
+		border-radius: 0;
 	}
 `;
 
