@@ -20,7 +20,7 @@ const Grid = styled.div`
 	grid-template-columns: repeat(auto-fill, 300px);
 	grid-gap: 25px;
 	justify-content: center;
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 640px) {
 		grid-template-columns: repeat(1, 80%);
 	}
 `;

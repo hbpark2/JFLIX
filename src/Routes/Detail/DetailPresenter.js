@@ -84,6 +84,10 @@ const Overview = styled.p`
 	}
 `;
 
+const Trailer = styled.div`
+	width: 100%;
+`;
+
 const DetailPresenter = ({ result, loading, error }) =>
 	loading ? (
 		<>
@@ -139,6 +143,17 @@ const DetailPresenter = ({ result, loading, error }) =>
 						</Item>
 					</ItemContainer>
 					<Overview>{result.overview}</Overview>
+					<Trailer>
+						<iframe
+							title={result.videos?.results[0].id}
+							width="700"
+							height="500"
+							src={`https://www.youtube.com/embed/${result.videos?.results[0].key}`}
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</Trailer>
 				</Data>
 			</Content>
 		</Container>
