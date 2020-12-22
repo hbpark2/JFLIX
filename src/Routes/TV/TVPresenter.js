@@ -9,6 +9,7 @@ import Poster from "Components/Poster";
 
 const Container = styled.div`
 	padding: 20px;
+	padding-top: 80px;
 `;
 
 const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
@@ -22,10 +23,11 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
 			<Container>
 				{topRated && topRated.length > 0 && (
 					<Section title="Top Rated Shows">
-						{topRated.map((show) => (
+						{topRated.map((show, index) => (
 							<Poster
 								key={show.id}
 								id={show.id}
+								idx={index}
 								imageUrl={show.poster_path}
 								title={show.original_name}
 								rating={show.vote_average}

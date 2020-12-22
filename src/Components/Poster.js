@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
+	position: relative;
+	top: -50px;
 	width: 100%;
 	font-size: 12px;
+	opacity: ${(props) => (props.idx <= 8 ? "1" : "0")};
+	transition: ${(props) => props.trs * 3}s;
 `;
 
 const Image = styled.div`
@@ -49,6 +53,8 @@ const ImageContainer = styled.div`
 const Title = styled.span`
 	display: block;
 	margin-bottom: 3px;
+	opacity: 0;
+	transition: opacity 1s;
 `;
 
 const Year = styled.span`
@@ -56,10 +62,18 @@ const Year = styled.span`
 	color: rgba(255, 255, 255, 0.7);
 `;
 
-const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => {
+const Poster = ({
+	id,
+	idx,
+	imageUrl,
+	title,
+	rating,
+	year,
+	isMovie = false,
+}) => {
 	return (
 		<Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
-			<Container>
+			<Container trs={Math.random()} idx={idx} className="title_ref">
 				<ImageContainer>
 					<Image
 						bgUrl={
@@ -76,7 +90,7 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => {
 						{rating}/10
 					</Rating>
 				</ImageContainer>
-				<Title>
+				<Title className="title_ref">
 					{title.length > 18 ? `${title.substring(0, 15)}...` : title}
 				</Title>
 				<Year>{year}</Year>

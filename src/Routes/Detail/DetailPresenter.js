@@ -149,9 +149,9 @@ const DetailPresenter = ({ result, loading, error }) =>
 							width="700"
 							height="500"
 							src={`https://www.youtube.com/embed/${result.videos?.results[0].key}`}
-							frameborder="0"
+							frameBorder="0"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
+							allowFullScreen
 						></iframe>
 					</Trailer>
 				</Data>

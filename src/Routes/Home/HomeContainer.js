@@ -32,14 +32,16 @@ export default class extends React.Component {
 				error: "Can't find movies information.",
 			});
 		} finally {
-			this.setState({
-				loading: false,
-			});
+			setTimeout(() => {
+				this.setState({
+					loading: false,
+				});
+			}, 2000);
 		}
 	}
 
 	render() {
-		console.log(this.state);
+		// console.log(this.state);
 		const { nowPlaying, upcoming, popular, error, loading } = this.state;
 		return (
 			<HomePresenter
