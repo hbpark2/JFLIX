@@ -33,7 +33,7 @@ const LoadAni = keyframes`
 
 const Container = styled.div`
 	width: 100vw;
-	heught: 100vh;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	font-size: 28px;
@@ -48,7 +48,7 @@ const Container = styled.div`
 		width: 100vw;
 		height: 100vh;
 		background-color: #f29f05;
-		transform-orgin: center;
+		transform-origin: center;
 		animation-name: ${LoadAni};
 		animation-duration: 2s;
 		animation-timing-function: cubic-bezier(0.32, 0.24, 0.15, 1);
