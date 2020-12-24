@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter, Route, Redirect, Switch, useLocation, useHistory} from 'react-router-dom'
+import {Route, Redirect, Switch, useLocation} from 'react-router-dom'
 import Home from 'Routes/Home'
 import TV from 'Routes/TV'
 import Search from 'Routes/Search'
