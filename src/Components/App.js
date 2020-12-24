@@ -1,9 +1,7 @@
-import React, { useContext, useRef } from "react";
+import React from "react";
 import Router from "Components/Router";
 import GlobalStyles from "Components/GlobalStyles";
-// import Scrollbar from "smooth-scrollbar";
 import Scrollbar from "react-smooth-scrollbar";
-import StoreProvider from "./store";
 import { HashRouter } from "react-router-dom";
 
 const App = () => {
