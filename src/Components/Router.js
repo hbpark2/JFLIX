@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router, Route, Redirect, Switch, useLocation, useHistory} from 'react-router-dom'
+import {HashRouter, Route, Redirect, Switch, useLocation, useHistory} from 'react-router-dom'
 import Home from 'Routes/Home'
 import TV from 'Routes/TV'
 import Search from 'Routes/Search'
@@ -10,10 +10,7 @@ import {animated, useTransition} from 'react-spring'
 
 export default () => {
   const location = useLocation()
-  const history = useHistory()
   const referrer = document.location
-  // console.log(location);
-  // console.log(history);
   console.log(referrer)
   const transitions = useTransition(location, location => location.pathname, {
     from: {
