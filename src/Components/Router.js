@@ -11,7 +11,6 @@ import {animated, useTransition} from 'react-spring'
 export default () => {
   const location = useLocation()
   const referrer = document.location
-  console.log(referrer)
   const transitions = useTransition(location, location => location.pathname, {
     from: {
       position: 'absolute',

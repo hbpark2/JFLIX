@@ -7,7 +7,7 @@ import { HashRouter } from "react-router-dom";
 const App = () => {
 	const handleScroll = (e) => {
 		const title_ = document.querySelectorAll(".title_ref");
-		// console.log(e.offset.y);
+
 		if (title_) {
 			title_.forEach((el) => {
 				// console.log(el.offsetTop);
